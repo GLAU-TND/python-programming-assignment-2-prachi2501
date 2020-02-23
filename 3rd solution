@@ -1,0 +1,13 @@
+x=eval(input())
+y=min(x)
+z=[y]
+w=y[-1]
+for i in x:
+  for j in x:
+    if(w==j[0] and z[0][0]!=j[-1]):
+      z.append(j)
+      w=j[-1]
+      x.remove(j)
+      break
+z.append(i)
+print(z)
