@@ -1,0 +1,12 @@
+x=eval(input())
+x=[str(i) for i in x]
+x.sort()
+for i in range(len(x)-1):
+  if x[i][0]==x[i+1][0] and len(x[i])<len(x[i+1]):
+    c=x[i]
+    x[i]=x[i+1]
+    x[i+1]=c
+num=''
+for i in range(len(x)-1,-1,-1):
+  num=num+x[i]
+print (int(num))
